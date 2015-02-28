@@ -13,8 +13,8 @@ public class PercentDiscountStrategy implements ProductDiscountStrategy {
 
     private double percent;
 
-    public PercentDiscountStrategy() {
-    }
+//    public PercentDiscountStrategy() {
+//    }
 
     public PercentDiscountStrategy(double percent) {
         setPercent(percent);

@@ -12,12 +12,17 @@ package kohlspos;
 public class Startup {
 
     public static void main(String[] args) {
+        
+        DatabaseStrategy db = new FakeDatabase();
+        
+        CashRegister cr = new CashRegister();
+        cr.startNewSale("100",db);
 
-        ProductDiscountStrategy discount = new PercentDiscountStrategy(0.05);
-
-        Product prod1 = new Product("A010", "Pen", 200, discount);
-
-        System.out.println(prod1.getDiscountAmount(2));
+//        ProductDiscountStrategy discount = new PercentDiscountStrategy(0.05);
+//
+//        Product prod1 = new Product("A010", "Pen", 200, discount);
+//
+//        System.out.println(prod1.getDiscountAmount(2));
 
     }
 

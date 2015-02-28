@@ -11,8 +11,43 @@ package kohlspos;
  */
 public class LineItem {
     
-    private Customer customer;
     private Product product;
+    private int itemQuantity;
+    
+
+//    public LineItem() {
+//    }
+    
+    
+
+    public LineItem(Product product, int itemQuantity) {
+        this.product = product;
+        this.itemQuantity = itemQuantity;
+        
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public int getItemQuantity() {
+        return itemQuantity;
+    }
+
+    public void setItemQuantity(int itemQuantity) {
+        this.itemQuantity = itemQuantity;
+    }
+
+    
+    
+    public double getLineSubtotal(){
+        return product.getUnitPrice()*itemQuantity-product.getDiscountAmount(itemQuantity);
+    }
+    
     
     
 }

@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package kohlspos;
 
-/**
- *
- * @author mpatel6
- */
+
 public class Product {
 
     private String productId;
@@ -16,8 +9,8 @@ public class Product {
     private double unitPrice;
     private ProductDiscountStrategy discount;
 
-    public Product() {
-    }
+//    public Product() {
+//    }
 
     public Product(String productId, String productDescription, double unitPrice, ProductDiscountStrategy discount) {
 //        this.productId = productId;

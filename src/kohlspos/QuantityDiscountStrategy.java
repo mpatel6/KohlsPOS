@@ -14,8 +14,8 @@ public class QuantityDiscountStrategy implements ProductDiscountStrategy{
     private int minQuantity;
     private double qtyDiscountAmount;
 
-    public QuantityDiscountStrategy() {
-    }
+//    public QuantityDiscountStrategy() {
+//    }
 
     public QuantityDiscountStrategy(int minQuantity, double qtyDiscountAmount) {
         this.minQuantity = minQuantity;
