@@ -53,7 +53,7 @@ public class LineItem {
     @Override
     public String toString(){
         String str;
-        str = product.getProductId()+"\t"+product.getProductDescription()+"\t"+ itemQuantity+"\t"+product.getDiscountAmount(itemQuantity)+"\t"+ getLineSubtotal();
+        str = product.getProductId()+"\t\t"+product.getProductDescription()+"\t"+ itemQuantity+"\t\t\t"+product.getDiscountAmount(itemQuantity)+"\t\t\t"+ getLineSubtotal();
         return str;
     }
     

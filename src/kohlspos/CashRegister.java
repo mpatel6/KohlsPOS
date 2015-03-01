@@ -16,7 +16,7 @@ public class CashRegister {
 
     public CashRegister() {
     //  receipt = new Receipt(String customerId, DatabaseStrategy db);
-        receipt = new Receipt();
+    //    receipt = new Receipt();
     }
     
     
@@ -35,9 +35,12 @@ public class CashRegister {
         
         System.out.println("Kohl's Corporation");
         System.out.println(receipt.getCustomerId());
+        System.out.println("Product ID\tProduct Description\tItem Quantity\t\tDiscount\t\t\tTotal");
         for(int i =0; i< itemIndex;i++){
         System.out.println(receipt.getLineItem(i));
         }
+        
+        System.out.println("Total Amount is: "+receipt.grandTotal());
         
     }
     

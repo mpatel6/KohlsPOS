@@ -46,7 +46,7 @@ public class QuantityDiscountStrategy implements ProductDiscountStrategy{
         if(unitQuantity<minQuantity){
             return 0;
         } else {
-        return qtyDiscountAmount*unitQuantity*unitPrice;
+        return qtyDiscountAmount*unitQuantity;
         }
     }
     

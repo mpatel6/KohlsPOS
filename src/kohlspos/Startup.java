@@ -17,9 +17,9 @@ public class Startup {
         
         CashRegister cr = new CashRegister();
         cr.startNewSale("100",db);
-        cr.addProduct("A101",db,5);
-        cr.addProduct("B205",db,6);
-        cr.addProduct("C222",db,7);
+        cr.addProduct("A101",db,4);
+          cr.addProduct("B205",db,6);
+          cr.addProduct("C222",db,7);
         cr.endSale();
 
 
