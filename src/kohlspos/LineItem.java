@@ -20,9 +20,11 @@ public class LineItem {
     
     
 
-    public LineItem(Product product, int itemQuantity) {
-        this.product = product;
+    public LineItem(String productId, DatabaseStrategy db, int itemQuantity) {
+        this.product = db.findProduct(productId);
         this.itemQuantity = itemQuantity;
+        
+     //   this.customer = db.findCustomerById(customerId);
         
     }
 
@@ -48,6 +50,11 @@ public class LineItem {
         return product.getUnitPrice()*itemQuantity-product.getDiscountAmount(itemQuantity);
     }
     
-    
+    @Override
+    public String toString(){
+        String str;
+        str = product.getProductId()+"\t"+product.getProductDescription()+"\t"+ itemQuantity+"\t"+product.getDiscountAmount(itemQuantity)+"\t"+ getLineSubtotal();
+        return str;
+    }
     
 }
