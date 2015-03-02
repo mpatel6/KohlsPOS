@@ -28,7 +28,7 @@ public class Customer {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(final String customerId) {
         this.customerId = customerId;
     }
 
@@ -36,7 +36,7 @@ public class Customer {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
+    public void setCustomerName(final String customerName) {
         this.customerName = customerName;
     }
 
