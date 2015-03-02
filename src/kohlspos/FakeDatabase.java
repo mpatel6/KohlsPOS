@@ -18,9 +18,10 @@ public class FakeDatabase implements DatabaseStrategy {
     };
 
     private Product[] products = {
-        new Product("A101", "MLB Brewer's Hat ", 20.5, new PercentDiscountStrategy(0.10)),
-        new Product("B205", "Men's Dress Shirt", 50.0, new QuantityDiscountStrategy(2, 5)),
-        new Product("C222", "Women's Socks    ", 10.0, new NoDiscountStrategy())
+        new Product("A100", "Men's Socks ", 20.5, new PercentDiscountStrategy(0.10)),
+        new Product("B200", "Dress Shirt ", 50.0, new QuantityDiscountStrategy(2, 5)),
+        new Product("C300", "Men's Shorts ", 10.0, new NoDiscountStrategy()),
+        new Product("D400", "Dress Pants ", 50.0, new NoDiscountStrategy())
     };
 
     @Override

@@ -7,13 +7,13 @@ package kohlspos;
 
 /**
  *
- * @author mpatel6
+ * @author Ankita
  */
-public class NoDiscountStrategy implements ProductDiscountStrategy {
-
+public class ReceiptConsoleOutputStrategy implements ReceiptOutputStrategy {
+    
     @Override
-    public double getDiscountAmount(double unitPrice, int unitQuantity) {
-        return 0;
+    public void outputReceipt(Receipt receipt){
+        System.out.println(receipt.getReceipt());
     }
-
+    
 }

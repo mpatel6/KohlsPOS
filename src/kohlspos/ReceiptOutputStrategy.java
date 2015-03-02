@@ -7,10 +7,10 @@ package kohlspos;
 
 /**
  *
- * @author mpatel6
+ * @author Ankita
  */
-public interface ProductDiscountStrategy {
+public interface ReceiptOutputStrategy {
 
-    double getDiscountAmount(double unitPrice, int unitQuantity);
-
+    void outputReceipt(Receipt receipt);
+    
 }

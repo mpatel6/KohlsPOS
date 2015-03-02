@@ -13,9 +13,6 @@ public class PercentDiscountStrategy implements ProductDiscountStrategy {
 
     private double percent;
 
-//    public PercentDiscountStrategy() {
-//    }
-
     public PercentDiscountStrategy(double percent) {
         setPercent(percent);
     }
@@ -33,8 +30,4 @@ public class PercentDiscountStrategy implements ProductDiscountStrategy {
         return percent * unitPrice * unitQuantity;
     }
 
-//    public static void main(String[] args) {
-//        percentDiscount discount = new percentDiscount(0.1);
-//        System.out.println(discount.getDiscountAmount(100.0, 2));
-//    }
 }

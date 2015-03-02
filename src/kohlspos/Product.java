@@ -1,6 +1,4 @@
-
 package kohlspos;
-
 
 public class Product {
 
@@ -9,13 +7,8 @@ public class Product {
     private double unitPrice;
     private ProductDiscountStrategy discount;
 
-//    public Product() {
-//    }
-
     public Product(String productId, String productDescription, double unitPrice, ProductDiscountStrategy discount) {
-//        this.productId = productId;
-//        this.productDescription = productDescription;
-//        this.unitPrice = unitPrice;
+
         setProductId(productId);
         setProductDescription(productDescription);
         setUnitPrice(unitPrice);
@@ -27,13 +20,6 @@ public class Product {
         return discount.getDiscountAmount(unitPrice, unitQuantity);
     }
 
-//    public ProductDiscountStrategy getDiscount() {
-//        return discount;
-//    }
-//
-//    public void setDiscount(ProductDiscountStrategy discount) {
-//        this.discount = discount;
-//    }
     public String getProductId() {
         return productId;
     }

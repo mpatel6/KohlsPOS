@@ -9,14 +9,13 @@ package kohlspos;
  *
  * @author Ankita
  */
-public class QuantityDiscountStrategy implements ProductDiscountStrategy{
-    
+public class QuantityDiscountStrategy implements ProductDiscountStrategy {
+
     private int minQuantity;
     private double qtyDiscountAmount;
 
 //    public QuantityDiscountStrategy() {
 //    }
-
     public QuantityDiscountStrategy(int minQuantity, double qtyDiscountAmount) {
         this.minQuantity = minQuantity;
         this.qtyDiscountAmount = qtyDiscountAmount;
@@ -37,17 +36,14 @@ public class QuantityDiscountStrategy implements ProductDiscountStrategy{
     public void setQtyDiscountAmount(double qtyDiscountAmount) {
         this.qtyDiscountAmount = qtyDiscountAmount;
     }
-    
-    
-    
 
     @Override
     public double getDiscountAmount(double unitPrice, int unitQuantity) {
-        if(unitQuantity<minQuantity){
+        if (unitQuantity < minQuantity) {
             return 0;
         } else {
-        return qtyDiscountAmount*unitQuantity;
+            return qtyDiscountAmount * unitQuantity;
         }
     }
-    
+
 }

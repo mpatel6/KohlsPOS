@@ -10,13 +10,12 @@ package kohlspos;
  * @author Ankita
  */
 public class Customer {
-    
+
     private String customerId;
     private String customerName;
 
 //    public Customer() {
 //    }
-
     public Customer(String customerId, String customerName) {
         this.customerId = customerId;
         this.customerName = customerName;
@@ -37,7 +36,5 @@ public class Customer {
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
-    
-    
-    
+
 }
