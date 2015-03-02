@@ -14,9 +14,12 @@ public class Customer {
     private String customerId;
     private String customerName;
 
-//    public Customer() {
-//    }
-    public Customer(String customerId, String customerName) {
+    /**
+     *
+     * @param customerId
+     * @param customerName
+     */
+    public Customer(final String customerId, final String customerName) {
         this.customerId = customerId;
         this.customerName = customerName;
     }

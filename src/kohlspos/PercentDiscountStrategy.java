@@ -13,7 +13,7 @@ public class PercentDiscountStrategy implements ProductDiscountStrategy {
 
     private double percent;
 
-    public PercentDiscountStrategy(double percent) {
+    public PercentDiscountStrategy(final double percent) {
         setPercent(percent);
     }
 
@@ -21,12 +21,12 @@ public class PercentDiscountStrategy implements ProductDiscountStrategy {
         return percent;
     }
 
-    public void setPercent(double percent) {
+    public void setPercent(final double percent) {
         this.percent = percent;
     }
 
     @Override
-    public double getDiscountAmount(double unitPrice, int unitQuantity) {
+    public double getDiscountAmount(final double unitPrice, final int unitQuantity) {
         return percent * unitPrice * unitQuantity;
     }
 

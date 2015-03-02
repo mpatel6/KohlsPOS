@@ -21,12 +21,12 @@ public class Receipt {
     public Receipt() {
     }
 
-    public Receipt(String customerId, DatabaseStrategy db) {
+    public Receipt(final String customerId, final DatabaseStrategy db) {
         this.customer = db.findCustomerById(customerId);
 
     }
 
-    public void addLineItem(String productId, DatabaseStrategy db, int itemQuantity) {
+    public void addLineItem(final String productId, final DatabaseStrategy db, final int itemQuantity) {
 
         LineItem[] temp = new LineItem[lineItem.length + 1];
         System.arraycopy(lineItem, 0, temp, 0, lineItem.length);
@@ -35,7 +35,7 @@ public class Receipt {
         arrayIndex++;
     }
 
-    public double subTotalAmount() {
+    private double subTotalAmount() {
         double grandTotal = 0;
         for (int i = 0; i < arrayIndex; i++) {
             grandTotal += lineItem[i].getLineSubtotal();
@@ -44,7 +44,7 @@ public class Receipt {
         return grandTotal;
     }
 
-    public double salesTaxAmount() {
+    private double salesTaxAmount() {
         return subTotalAmount() * SALESTAXRATE;
     }
 

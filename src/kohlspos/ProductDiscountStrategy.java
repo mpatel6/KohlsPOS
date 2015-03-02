@@ -11,6 +11,6 @@ package kohlspos;
  */
 public interface ProductDiscountStrategy {
 
-    double getDiscountAmount(double unitPrice, int unitQuantity);
+    double getDiscountAmount(final double unitPrice, final int unitQuantity);
 
 }

@@ -13,19 +13,19 @@ public class CashRegister {
 
     private Receipt receipt;
     private int itemIndex = 0;
-    private ReceiptOutputStrategy outputReceipt;
+    private final ReceiptOutputStrategy outputReceipt;
 
-    public CashRegister(ReceiptOutputStrategy outputReceipt) {
+    public CashRegister(final ReceiptOutputStrategy outputReceipt) {
 
         this.outputReceipt = outputReceipt;
     }
 
-    public void startNewSale(String customerId, DatabaseStrategy db) {
+    public void startNewSale(final String customerId, final DatabaseStrategy db) {
 
         receipt = new Receipt(customerId, db);
     }
 
-    public void addProduct(String productId, DatabaseStrategy db, int itemQuantity) {
+    public void addProduct(final String productId, final DatabaseStrategy db, final int itemQuantity) {
         itemIndex++;
         receipt.addLineItem(productId, db, itemQuantity);
     }

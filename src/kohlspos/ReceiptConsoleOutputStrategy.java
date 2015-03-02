@@ -10,10 +10,10 @@ package kohlspos;
  * @author Ankita
  */
 public class ReceiptConsoleOutputStrategy implements ReceiptOutputStrategy {
-    
+
     @Override
-    public void outputReceipt(Receipt receipt){
+    public void outputReceipt(final Receipt receipt) {
         System.out.println(receipt.getReceipt());
     }
-    
+
 }

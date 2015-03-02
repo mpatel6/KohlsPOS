@@ -12,11 +12,11 @@ import javax.swing.JTextArea;
  *
  * @author Ankita
  */
-public class ReceiptGUIOutputStrategy implements ReceiptOutputStrategy{
+public class ReceiptGUIOutputStrategy implements ReceiptOutputStrategy {
 
     @Override
-    public void outputReceipt(Receipt receipt) {
-        JOptionPane.showMessageDialog(null,new JTextArea(receipt.getReceipt()));
+    public void outputReceipt(final Receipt receipt) {
+        JOptionPane.showMessageDialog(null, new JTextArea(receipt.getReceipt()));
     }
-    
+
 }

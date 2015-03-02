@@ -28,8 +28,7 @@ public class FakeDatabase implements DatabaseStrategy {
     public final Customer findCustomerById(final String CustomerId) {
 
         if (CustomerId == null || CustomerId.length() == 0) {
-            System.out.println("Sorry, FakeDatabase.findCustomer method has "
-                    + "illegal argument");
+            //Throw exception for illegal customer ID
             return null;
         }
 
@@ -48,9 +47,8 @@ public class FakeDatabase implements DatabaseStrategy {
     public final Product findProduct(final String productId) {
 
         if (productId == null || productId.length() == 0) {
-            System.out.println("Sorry, FakeDatabase.findProduct method has "
-                    + "illegal argument");
-            return null;  // end method prematurely after log to console
+            //Throw exception for illegal product ID
+            return null;
         }
 
         Product product = null;

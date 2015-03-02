@@ -13,6 +13,6 @@ public interface DatabaseStrategy {
 
     Customer findCustomerById(final String CustomerId);
 
-    Product findProduct(final String productId);
+    public abstract Product findProduct(final String productId);
 
 }

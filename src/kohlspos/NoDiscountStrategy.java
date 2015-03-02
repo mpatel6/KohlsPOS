@@ -11,8 +11,14 @@ package kohlspos;
  */
 public class NoDiscountStrategy implements ProductDiscountStrategy {
 
+    /**
+     *
+     * @param unitPrice
+     * @param unitQuantity
+     * @return
+     */
     @Override
-    public double getDiscountAmount(double unitPrice, int unitQuantity) {
+    public double getDiscountAmount(final double unitPrice, final int unitQuantity) {
         return 0;
     }
 

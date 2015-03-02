@@ -7,7 +7,14 @@ public class Product {
     private double unitPrice;
     private ProductDiscountStrategy discount;
 
-    public Product(String productId, String productDescription, double unitPrice, ProductDiscountStrategy discount) {
+    /**
+     *
+     * @param productId
+     * @param productDescription
+     * @param unitPrice
+     * @param discount
+     */
+    public Product(final String productId, final String productDescription, final double unitPrice, final ProductDiscountStrategy discount) {
 
         setProductId(productId);
         setProductDescription(productDescription);
@@ -16,7 +23,7 @@ public class Product {
 
     }
 
-    public double getDiscountAmount(int unitQuantity) {
+    public double getDiscountAmount(final int unitQuantity) {
         return discount.getDiscountAmount(unitPrice, unitQuantity);
     }
 
@@ -24,7 +31,7 @@ public class Product {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(final String productId) {
         this.productId = productId;
     }
 
@@ -32,7 +39,7 @@ public class Product {
         return productDescription;
     }
 
-    public void setProductDescription(String productDescription) {
+    public void setProductDescription(final String productDescription) {
         this.productDescription = productDescription;
     }
 
@@ -40,7 +47,7 @@ public class Product {
         return unitPrice;
     }
 
-    public void setUnitPrice(double unitPrice) {
+    public void setUnitPrice(final double unitPrice) {
         this.unitPrice = unitPrice;
     }
 

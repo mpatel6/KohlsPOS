@@ -11,6 +11,6 @@ package kohlspos;
  */
 public interface ReceiptOutputStrategy {
 
-    void outputReceipt(Receipt receipt);
-    
+    void outputReceipt(final Receipt receipt);
+
 }

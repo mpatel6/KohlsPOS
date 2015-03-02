@@ -14,9 +14,7 @@ public class QuantityDiscountStrategy implements ProductDiscountStrategy {
     private int minQuantity;
     private double qtyDiscountAmount;
 
-//    public QuantityDiscountStrategy() {
-//    }
-    public QuantityDiscountStrategy(int minQuantity, double qtyDiscountAmount) {
+    public QuantityDiscountStrategy(final int minQuantity, final double qtyDiscountAmount) {
         this.minQuantity = minQuantity;
         this.qtyDiscountAmount = qtyDiscountAmount;
     }
@@ -25,7 +23,7 @@ public class QuantityDiscountStrategy implements ProductDiscountStrategy {
         return minQuantity;
     }
 
-    public void setMinQuantity(int minQuantity) {
+    public void setMinQuantity(final int minQuantity) {
         this.minQuantity = minQuantity;
     }
 
@@ -33,12 +31,18 @@ public class QuantityDiscountStrategy implements ProductDiscountStrategy {
         return qtyDiscountAmount;
     }
 
-    public void setQtyDiscountAmount(double qtyDiscountAmount) {
+    public void setQtyDiscountAmount(final double qtyDiscountAmount) {
         this.qtyDiscountAmount = qtyDiscountAmount;
     }
 
+    /**
+     *
+     * @param unitPrice
+     * @param unitQuantity
+     * @return
+     */
     @Override
-    public double getDiscountAmount(double unitPrice, int unitQuantity) {
+    public double getDiscountAmount(final double unitPrice, final int unitQuantity) {
         if (unitQuantity < minQuantity) {
             return 0;
         } else {

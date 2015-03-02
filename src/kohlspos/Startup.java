@@ -18,8 +18,8 @@ public class Startup {
         
         CashRegister cr = new CashRegister(output);
         cr.startNewSale("100", db);
-        cr.addProduct("A100", db, 4);
-        cr.addProduct("B200", db, 6);
+        cr.addProduct("A100", db, 2);
+        cr.addProduct("B200", db, 3);
         cr.addProduct("C300", db, 7);
         cr.addProduct("D400", db, 2);
         cr.endSale();
@@ -27,7 +27,7 @@ public class Startup {
         
         ReceiptOutputStrategy output2 = new ReceiptGUIOutputStrategy();
         CashRegister cr2 = new CashRegister(output2);
-        cr2.startNewSale("100", db);
+        cr2.startNewSale("200", db);
         cr2.addProduct("A100", db, 2);
         cr2.addProduct("B200", db, 3);
         cr2.addProduct("C300", db, 4);
